@@ -1,0 +1,319 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Ejercicio Estudiante</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="vehiculo.svg" alt="" width="82" height="82">
+        <h2>El estudiante suicida</h2>
+        <small>Por favor completa los datos del formulario y ve como el enunciado va cambiando de acuerdo a lo ingresado.</small>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4" style="display:none;">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Your cart</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Second product</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$8</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Third item</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Promo code</h6>
+                <small>EXAMPLECODE</small>
+              </div>
+              <span class="text-success">-$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$20</strong>
+            </li>
+          </ul>
+
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Promo code">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">..:: Concentración de Monóxido de Carbono ::..</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="txtConcentracionE">Concentración Entrada de CO:</label>
+                <div class="input-group">                  
+                  <input type="number" class="form-control" id="txtConcentracionE" min="0" max="100" placeholder="80" value="80" step=".01" required>
+                  <div class="input-group-append">
+                   <span class="input-group-text" id="basic-addon1">%</span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Se requiere una «concentración de entrada» valida.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="txtConcentracionS">Concentración Inicial de CO:</label>
+                <div class="input-group">                  
+                  <input type="number" class="form-control" id="txtConcentracionS" min="0" max="100" placeholder="0" value="0" step=".01" required>
+                  <div class="input-group-append">
+                   <span class="input-group-text" id="basic-addon2">%</span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Se requiere una «concentración de salida» valida.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="txtVelocidad">Velocidad Entrada/Salida:</label>
+                <div class="input-group">                  
+                  <input type="number" class="form-control" id="txtVelocidad" min="1" max="1000000" placeholder="0" value="1" step=".01" required>
+                  <div class="input-group-append">
+                   <span class="input-group-text" id="basic-addon3">Litros/Segundos</span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Se requiere una «concentración de salida» valida.
+                  </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="txtVolumen">Volumen del vehículo <span class="text-muted">(m<sup>3</sup>)</span></label>
+              <input type="number" class="form-control" id="txtVolumen" min="1" max="1000000" value="3" step=".01" required>
+              <div class="invalid-feedback">
+                Ingrese un número de volumen valido.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="txtConcentracionL">Concentración Letal:</label>
+                <div class="input-group">                  
+                  <input type="number" class="form-control" id="txtConcentracionL" min="0" max="100" placeholder="5" value="5" step=".01" required>
+                  <div class="input-group-append">
+                   <span class="input-group-text" id="basic-addon1">%</span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Se requiere una porcentaje de «concentración letal» valida.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="txtTiempo">Tiempo de espera <span class="text-muted">(minutos)</span></label>                                
+                  <input type="number" class="form-control" id="txtTiempo" min="0" max="3600" placeholder="5" value="5" step=".01" required>                  
+                  <div class="invalid-feedback">
+                    Se requiere un número de tiempo valido.
+                  </div>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <h4 class="mb-3">Enunciado</h4>
+            <p class="lead" style="text-align: justify;">Un estudiante de Ingeniería de Sistemas decide poner fin a su vida porque
+no entiende los sistemas dinámicos, para esto, construye un dispositivo que
+consta de un tubo que va del escape del carro al interior y una bomba que
+extrae el aire del vehículo y lo expulsa. Una vez que el carro se enciende el
+aire que se introduce en el carro tiene un <b><span id="L_ConcentracionE">80</span>%</b> de Monóxido de carbono (co)
+y la velocidad de entrada es de <b><span id="L_Velocidad">1</span> litro por segundo</b>; la bomba que extrae el
+aire, lo extrae a la misma velocidad. El interior del carro tiene <b><span id="L_Volumen">3</span> m<sup>3</sup></b>
+y el monóxido de carbono se distribuye homogéneamente dentro del
+vehículo.<br>
+El carro es blindado y no se puede abrir desde adentro, resulta que el
+estudiante se arrepiente, pero no puede abrir el carro desde adentro, pero
+este recuerda que tiene un celular y logra llamar a su madre, si una
+proporción del <b><span id="L_Letal">5</span>%</b> de monóxido de carbono es letal y la madre tarda <b><span id="L_Minutos">5</span>
+minutos</b> en llegar ¿el estudiante consigue salvarse?<br><br>Considere que la concentración inicial de CO dentro del vehículo es de <b><span id="L_ConcentracionS">0</span>%</b></p>
+			<div id="d_Results" style="display: none;">
+			<hr class="mb-4">
+            <h4 class="mb-3">Resultados</h4>
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <label for="cc-expiration"><b>% de CO a los <span id="L_Minutos2">5</span> min:</b></label>
+                <span id="LF_CantidadCO"></span>
+              </div>
+              <div class="col-md-4 mb-4">
+                <label for="cc-expiration"><b>Litros de CO:</b></label>
+                <span id="LF_LitrosCO"></span>
+              </div>
+         	</div>
+         	<div id="img_happy" style="display: none;">
+         		<img class="d-block mx-auto mb-4" src="happy.svg" alt="" width="170" height="170">
+				<p style="text-align: center;">¡Estuvo muuuy cerca!, el estudiante sobrevive.<br/>¡Felicidades!.</p>
+         	</div>
+         	<div id="img_dead" style="display: none;">
+         		<img class="d-block mx-auto mb-4" src="dead.svg" alt="" width="170" height="170">
+         		<p style="text-align: center;">Demasiado tarde, el estudiante ha muerto :( <br/>Lo sentimos.<br/>R.I.P.</p>
+         	</div>
+         	<div id="img_confuse" style="display: none;">
+         		<img class="d-block mx-auto mb-4" src="confuse.svg" alt="" width="170" height="170">
+         		<p style="text-align: center;">Espera un momento... quizá si... NO NO NO... y ¿sí?... espera ¿qué?,<br/> ¡Ahh, esto no tiene sentido! :'(</p>
+         	</div>
+            <div class="row">
+              <div class="col-md-12 mb-12">
+                <div>Con los datos suministrados se puede determinar que el estudiante no podría sobrevivir más de <b><span id="LF_Tiempo"></span></b> minutos aproximadamente.</div>
+              </div>              
+            </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Validar Supervivencia</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 Sistemas Dinámicos</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="mailto:fabian.montoyab@campusucc.edu.co">Fabian Dario Montoya</a></li>
+          <li class="list-inline-item"><a href="#">•</a></li>
+          <li class="list-inline-item"><a href="mailto:brayam.martinezr@campusucc.edu.co">Felipe Martinez</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+                alert("Favor verifica los valores de los campos.");
+              }else{
+              	validateData();
+              	event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+
+      $(document).ready(function() {
+      	$("#txtConcentracionE").keyup(function(evt){
+      		$("#L_ConcentracionE").html(this.value);
+      		$("#d_Results").hide();
+      	});
+      	$("#txtConcentracionS").keyup(function(evt){
+      		$("#L_ConcentracionS").html(this.value);
+      		$("#d_Results").hide();
+      	});
+      	$("#txtVelocidad").keyup(function(evt){
+      		$("#L_Velocidad").html(this.value);
+      		$("#d_Results").hide();
+      	});
+      	$("#txtVolumen").keyup(function(evt){
+      		$("#L_Volumen").html(this.value);
+      		$("#d_Results").hide();
+      	});
+      	$("#txtTiempo").keyup(function(evt){
+      		$("#L_Minutos").html(this.value);
+      		$("#L_Minutos2").html(this.value);
+      		$("#d_Results").hide();
+      	});
+		$("#txtConcentracionL").keyup(function(evt){
+      		$("#L_Letal").html(this.value);
+      		$("#d_Results").hide();
+      	});
+
+      });
+
+      function validateData(){
+      	$("#d_Results").hide();
+      	try{
+      	let Ce = $("#txtConcentracionE").val().replace(/,/g,'.')/100;
+      	let Co = $("#txtConcentracionS").val().replace(/,/g,'.')/100;
+      	let Re = $("#txtVelocidad").val().replace(/,/g,'.');
+      	let Rs = $("#txtVelocidad").val().replace(/,/g,'.');
+      	let Vo = $("#txtVolumen").val().replace(/,/g,'.') * 1000;
+      	let T = $("#txtTiempo").val().replace(/,/g,'.') * 60;
+      	let CO = $("#txtConcentracionL").val().replace(/,/g,'.');
+
+      	let litrosTiempo = Ce*Vo+(Co-Ce)*Vo*Math.exp((-1/Vo)*T);
+
+      	$("#LF_LitrosCO").html(litrosTiempo + " lts.");
+
+      	let cantidadCO = (litrosTiempo/Vo)*100;
+
+      	$("#LF_CantidadCO").html(cantidadCO + " %.");
+
+      	let cantidad = (CO*T)/cantidadCO;
+
+      	$("#LF_Tiempo").html(cantidad/60);
+
+      	$("#img_happy").hide();
+      	$("#img_dead").hide();
+      	$("#img_confuse").hide();
+      	if(cantidadCO >= CO){
+      		$("#img_dead").show();
+      		//alert("El estudiante muere, lo sentimos :(");
+      	}else if(cantidadCO == 0 || cantidadCO < CO){
+      		$("#img_happy").show();
+      		//alert("Oye, el estudiante vive, muy bien. :D");
+      	}else{
+      		$("#img_confuse").show();
+      		//alert("Lo sentimos, obtenemos un dato no muy correcto para nosotros, solo miralo: "+cantidadCO);
+      	}
+      	$("#d_Results").show();
+      }catch(e){alert("Lo sentimos, ocurrió un error al intentar validar.\n"+e);}
+      }
+    </script>
+  </body>
+</html>
